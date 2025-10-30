@@ -287,4 +287,5 @@ TODO
     - https://github.com/nvim-telescope/telescope.nvim/wiki/Extensions
     - https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
 - Make ai auto complete not require key presses to begin
+- Get vertical line characters plugin
 --]]
