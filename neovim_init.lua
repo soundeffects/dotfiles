@@ -273,6 +273,7 @@ vim.opt.scrolloff = 10
 vim.wo.foldmethod = "expr"
 vim.opt.foldlevel = 100
 vim.opt.ruler = false
+vim.opt.wrap = false
 
 --[[
 TODO
@@ -288,4 +289,5 @@ TODO
     - https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
 - Make ai auto complete not require key presses to begin
 - Get vertical line characters plugin
+- Smarter word wrap (only when writing paragraphs)
 --]]

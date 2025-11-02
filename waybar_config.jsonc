@@ -1,0 +1,57 @@
+[{
+    //"layer": "top",
+    //"position": "top",
+    //"output": [],
+    "height": 48,
+    "spacing": 48,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "cava",
+        "mpris",
+        "privacy"
+    ],
+
+    "hyprland/workspaces": {
+        "active-only": false,
+        "format": "{icon}   {windows}",
+        "format-window-separator": " ",
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "title<.*youtube.*>": "",
+            "class<zen>": "",
+            "class<firefox> title<.*github.*>": "",
+            "kitty": "",
+            "code": "󰨞"
+        }
+    },
+
+    "clock": {
+        "interval": 60,
+        "format": "{:%a/%d %H:%M}"
+    },
+
+    "cava": {
+        "framerate": 60,
+        "bars": 16
+    },
+
+    "mpris": {
+        "format": "{dynamic}",
+        "title-len": 20,
+        "album-len": 20,
+        "artist-len": 20,
+        "dynamic-order": [
+            "artist",
+            "album",
+            "title"
+        ],
+        "dynamic-separator": ", "
+    }
+}]
