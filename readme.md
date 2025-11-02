@@ -1,3 +1,8 @@
+# My dotfiles
+Simple customization for my linux setup. Feel free to browse at one of the two mirrors:
+- Github: https://github.com/soundeffects/dotfiles
+- Codeberg: https://codeberg.org/soundeffects/dotfiles
+
 # Ricing Todo-list
 - Install and set up chromeless Firefox
 - Firewall (firewalld, reaction (crate), or just nftables arch page)
