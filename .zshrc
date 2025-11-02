@@ -18,8 +18,9 @@ export EDITOR=nvim
 # Launch function
 l() {
     ("$1" &)
-    exit
 }
 
 # Aliases
 alias time="date +\"%a/%d, %H:%M\""
+alias n="nvim"
+alias f="eza"
