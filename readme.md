@@ -4,7 +4,7 @@ Simple customization for my linux setup. Feel free to browse at one of the two m
 - Codeberg: https://codeberg.org/soundeffects/dotfiles
 
 # Ricing Todo-list
-- Install and set up chromeless Firefox
+- Prettify zen browser
 - Firewall (firewalld, reaction (crate), or just nftables arch page)
 - Tricking out zsh (zsh-autosuggestions, zsh-hints, zsh-syntax-highlighting, zsh-llm-suggestions, fzf-zsh-plugin, ohmyzsh)
 - Install a login greeter (SDDM or greetd/ReGreet)
@@ -19,7 +19,6 @@ Simple customization for my linux setup. Feel free to browse at one of the two m
 - coreboot (open-source bootloader)
 - hyperscrolling or niri
 - fix opencode
-- switch to kitty for automatic theme reloading
 
 ## Issue pages
 - If NVIDIA issues: check NVIDIA arch page and NVIDIA hyprland page
