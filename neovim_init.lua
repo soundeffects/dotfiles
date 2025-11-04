@@ -39,12 +39,13 @@ require("lazy").setup({
 		{ "lukas-reineke/indent-blankline.nvim" },
 		{ "stevearc/conform.nvim" },
 		{ "milanglacier/minuet-ai.nvim" },
+		{ "chomosuke/typst-preview.nvim", lazy = false },
 	},
 	install = { colorscheme = { "rose-pine" } },
 	checker = { enabled = true },
 })
 
-require("nvim-treesitter.config").setup({
+require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"rust",
 		"javascript",
@@ -63,10 +64,6 @@ require("nvim-treesitter.config").setup({
 	},
 	sync_install = true,
 	auto_install = true,
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = false,
-	},
 })
 
 local harpoon = require("harpoon")
@@ -118,9 +115,9 @@ treesj.setup({
 	max_join_length = 1000,
 })
 
+require("typst-preview").setup()
 require("mini.surround").setup()
 require("mini.trailspace").setup()
-require("mini.pairs").setup()
 require("mini.icons").setup()
 require("mini.notify").setup()
 require("mini.starter").setup()

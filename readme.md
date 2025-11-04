@@ -19,6 +19,7 @@ Simple customization for my linux setup. Feel free to browse at one of the two m
 - [zenith](https://github.com/bvaisvil/zenith)
 - [systemctl](https://wiki.archlinux.org/title/Systemd)
 - [waybar](https://github.com/Alexays/Waybar)
+- [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland)
 
 ## For Video Wallpaper
 My setup uses the Apple TV aerial videos found [here](https://docs.google.com/spreadsheets/d/1bboTohF06r-fafrImTExAPqM9m6h2m2lgJyAkQuYVJI/edit?gid=1684411812#gid=1684411812).
