@@ -40,6 +40,7 @@ require("lazy").setup({
 		{ "stevearc/conform.nvim" },
 		{ "milanglacier/minuet-ai.nvim" },
 		{ "chomosuke/typst-preview.nvim", lazy = false },
+		{ "nvimdev/lspsaga.nvim", dependencies = { "nvim-treesitter/nvim-treesitter" } },
 	},
 	install = { colorscheme = { "rose-pine" } },
 	checker = { enabled = true },
@@ -124,6 +125,7 @@ require("mini.starter").setup()
 require("mini.completion").setup()
 require("gitsigns").setup()
 require("ibl").setup()
+require("lspsaga").setup()
 require("telescope").load_extension("frecency")
 
 require("mini.comment").setup({
@@ -237,6 +239,7 @@ end, { desc = "Load and open undotree" })
 vim.keymap.set("n", "<leader>g", vim.cmd.Git, { desc = "Open fugitive menu" })
 vim.keymap.set("n", "t", treesj.toggle, { desc = "Split/join the block under cursor" })
 vim.keymap.set("v", "t", ":Tabularize /")
+vim.keymap.set("n", "r", "<cmd>Lspsaga hover_doc<CR>")
 
 -- lsp
 vim.lsp.enable("rust_analyzer")
@@ -284,7 +287,7 @@ TODO
 - Peruse the following resources for potential plugins:
     - https://github.com/nvim-telescope/telescope.nvim/wiki/Extensions
     - https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
-- Make ai auto complete not require key presses to begin
 - Get vertical line characters plugin
 - Smarter word wrap (only when writing paragraphs)
+- Avante.nvim for better AI integration
 --]]
