@@ -19,20 +19,21 @@ setopt appendhistory
 # Environment variables
 export EDITOR=nvim
 
-# Launch function
 launch() {
     ("$1" &)
 }
 
-# Report function
-report() {
-    nvidia-smi
-}
-
 # Aliases
 alias hardware="zenith -c 18 -d 18 -n 18 -g 18 -p 8"
+alias gpu="nvidia-smi"
 alias system="systemctl list-units --state=failed"
-alias ls="eza"
+alias ls="eza -a"
 alias cd="z"
 alias vi="nvim"
 alias vim="nvim"
+alias browse="librewolf"
+
+# Web search engines
+brave() {
+    browse "https://search.brave.com/search?safesearch=off&q=$*"
+}
