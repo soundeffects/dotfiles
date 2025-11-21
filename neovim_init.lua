@@ -1,3 +1,7 @@
+-- disable builtin packages
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- install lazy package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -41,6 +45,7 @@ require("lazy").setup({
 		{ "milanglacier/minuet-ai.nvim" },
 		{ "chomosuke/typst-preview.nvim", lazy = false },
 		{ "nvimdev/lspsaga.nvim", dependencies = { "nvim-treesitter/nvim-treesitter" } },
+		{ "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	},
 	install = { colorscheme = { "rose-pine" } },
 	checker = { enabled = true },
@@ -85,8 +90,6 @@ local animate = require("mini.animate")
 animate.setup({
 	cursor = {
 		enable = false,
-		-- timing = animate.gen_timing.linear({duration = 100, unit = 'total'}),
-		-- path = animate.gen_path.angle()
 	},
 	scroll = {
 		timing = animate.gen_timing.linear({ duration = 100, unit = "total" }),
@@ -125,7 +128,6 @@ require("mini.starter").setup()
 require("mini.completion").setup()
 require("gitsigns").setup()
 require("ibl").setup()
-require("lspsaga").setup()
 require("telescope").load_extension("frecency")
 
 require("mini.comment").setup({
@@ -133,6 +135,10 @@ require("mini.comment").setup({
 		comment_line = "c",
 		comment_visual = "c",
 	},
+})
+
+require("lspsaga").setup({
+	code_action_prompt = { enable = false },
 })
 
 require("conform").setup({
@@ -175,10 +181,19 @@ require("minuet").setup({
 	},
 })
 
+require("nvim-tree").setup({
+	sort = {
+		sorter = "case_sensitive",
+	},
+	view = {
+		width = 30,
+	},
+})
+
 -- mappings
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>d", vim.cmd.NvimTreeOpen)
 vim.keymap.set("n", "da", "mzJ`z")
 vim.keymap.set("n", "J", "}")
 vim.keymap.set("n", "<C-j>", "<C-d>")
@@ -274,6 +289,7 @@ vim.wo.foldmethod = "expr"
 vim.opt.foldlevel = 100
 vim.opt.ruler = false
 vim.opt.wrap = false
+vim.opt.signcolumn = "no"
 
 --[[
 TODO
