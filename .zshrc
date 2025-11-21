@@ -20,7 +20,9 @@ setopt appendhistory
 export EDITOR=nvim
 
 launch() {
-    ("$1" &)
+    args=$*
+    shift
+    ($1 $args &)
 }
 
 # Aliases
@@ -31,9 +33,12 @@ alias ls="eza -a"
 alias cd="z"
 alias vi="nvim"
 alias vim="nvim"
-alias browse="librewolf"
 
-# Web search engines
+# Web
+browse() {
+    (librewolf $1 &)
+}
+
 brave() {
     browse "https://search.brave.com/search?safesearch=off&q=$*"
 }
